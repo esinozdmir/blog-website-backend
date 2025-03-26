@@ -119,5 +119,17 @@ public class BlogServiceImpl implements BlogService {
         return BlogMapper.maptoBlogDto(updated);
     }
 
+    @Override
+    public Long addBlogLike(Long id) {
+        BlogPost blogPost = blogRepository.findById(id).get();
+        if(blogPost.getBlogLike()==null){blogPost.setBlogLike(0L);}
+        Long addedblogLike= blogPost.getBlogLike() +1;
+        blogPost.setBlogLike(addedblogLike);
+         blogRepository.save(blogPost);
+        return addedblogLike;
+    }
+
+
+
 
 }

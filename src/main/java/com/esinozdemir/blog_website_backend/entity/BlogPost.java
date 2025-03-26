@@ -41,6 +41,18 @@ public class BlogPost {
     @DateTimeFormat
     private Date blogDate;
 
+    @Column(nullable = false)
     private Long blogLike;
+
+    @PrePersist
+    protected void onCreate() {
+        if (blogLike == null) {
+            blogLike = 0L;
+        }
+    }
+
+    @OneToMany(mappedBy = "blogPost", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonIgnore
+    private List<BlogLikes> likes;
 
 }

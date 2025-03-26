@@ -67,6 +67,9 @@ public class BlogController {
         return blogService.updateBlogPost(title, content, userId, commentJson, file, blogPostId, date, like);
     }
 
-    
+    @PatchMapping("add-blog-like")
+    public Long addBlogLike(@RequestParam(name = "id") Long id) {
+        return blogService.addBlogLike(id);
+    }
 
 }

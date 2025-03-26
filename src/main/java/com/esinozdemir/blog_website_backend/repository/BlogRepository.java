@@ -10,4 +10,6 @@ import java.util.List;
 public interface BlogRepository extends JpaRepository<BlogPost,Long> {
 
     List<BlogPost> getAllByAuthorId(String authorId);
+
+    List<BlogPost> findByBlogPostId(Long blogPostId);
 }
