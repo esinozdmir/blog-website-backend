@@ -1,5 +1,6 @@
 package com.esinozdemir.blog_website_backend.dto;
 
+import com.esinozdemir.blog_website_backend.entity.BlogLikes;
 import com.esinozdemir.blog_website_backend.entity.Comments;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -33,5 +34,6 @@ public class BlogDto {
 
     private Long blogLike;
 
+    private List<BlogLikes> likes;
 
 }

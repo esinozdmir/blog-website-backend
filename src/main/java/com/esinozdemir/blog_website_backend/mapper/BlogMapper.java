@@ -13,7 +13,8 @@ public class BlogMapper {
                 blogPost.getComments(),
                 blogPost.getImage(),
                 blogPost.getBlogDate(),
-                blogPost.getBlogLike()
+                blogPost.getBlogLike(),
+                blogPost.getLikes()
         );
 
     }
@@ -27,7 +28,9 @@ public class BlogMapper {
                 blogDto.getComments(),
                 blogDto.getImageUrl(),
                 blogDto.getBlogDate(),
-                blogDto.getBlogLike()
+                blogDto.getBlogLike(),
+                blogDto.getLikes()
+
         );
 
     }

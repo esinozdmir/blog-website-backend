@@ -1,25 +1,19 @@
-package com.esinozdemir.blog_website_backend.entity;
+package com.esinozdemir.blog_website_backend.dto;
 
-import jakarta.persistence.*;
+import com.esinozdemir.blog_website_backend.entity.BlogPost;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity
-public class BlogLikes {
+public class BlogLikeDto {
 
-    @Id
-    @GeneratedValue
     private Long id;
 
-    @ManyToOne
-    @JoinColumn(name = "blogPostId", nullable = false)
     private BlogPost blogPost;
 
     private Long userId;
