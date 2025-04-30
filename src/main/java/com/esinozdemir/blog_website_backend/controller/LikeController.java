@@ -23,4 +23,9 @@ public class LikeController {
         return blogLikeService.blogLikedUsers(blogLikeDto);
     }
 
+    @DeleteMapping(path = "unLike-post")
+    ResponseEntity<Boolean> blogUnlikedUsers(@RequestBody BlogLikeDto blogLikeDto) {
+        return blogLikeService.blogUnlikedUsers(blogLikeDto);
+    }
+
 }

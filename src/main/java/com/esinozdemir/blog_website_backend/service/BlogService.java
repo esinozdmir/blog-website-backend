@@ -16,4 +16,5 @@ public interface BlogService {
     BlogDto updateBlogPost(String title, String content, Long userId, String commentJson, MultipartFile file, Long blogPostId, String date, Long like);
     Long addBlogLike(Long id);
 
+
 }

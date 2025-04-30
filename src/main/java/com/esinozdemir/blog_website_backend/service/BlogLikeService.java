@@ -7,4 +7,5 @@ import org.springframework.stereotype.Service;
 
 public interface BlogLikeService {
     ResponseEntity<Boolean> blogLikedUsers(BlogLikeDto blogLikeDto);
+    ResponseEntity<Boolean> blogUnlikedUsers(BlogLikeDto blogLikeDto);
 }
